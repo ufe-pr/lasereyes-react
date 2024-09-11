@@ -1,5 +1,5 @@
+import { useLaserEyes } from "@";
 import { UNISAT } from "lasereyes-core";
-import { useLaserEyes } from "../lib/providers/lasereyes-provider";
 
 export default function UnisatCard() {
   const { connected, connect, disconnect, address, publicKey } = useLaserEyes();

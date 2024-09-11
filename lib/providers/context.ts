@@ -1,6 +1,8 @@
 import { MAINNET, NetworkType, ProviderType } from "lasereyes-core";
+import { createContext } from "react";
+import { LaserEyesContextType } from "./types";
 
-export const initialContext = {
+const initialContext = {
   hasUnisat: false,
   hasXverse: false,
   hasOyl: false,
@@ -49,3 +51,6 @@ export const initialContext = {
   isCreatingCommit: false,
   isInscribing: false,
 }
+
+
+export const LaserEyesContext = createContext<LaserEyesContextType>(initialContext);

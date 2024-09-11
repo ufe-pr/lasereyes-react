@@ -1,5 +1,5 @@
-import { ReactNode, createContext, useContext, useMemo } from "react";
-import { initialContext } from "./constants";
+import { ReactNode, useMemo } from "react";
+import { LaserEyesContext } from "./context";
 import {
   Config,
   LaserEyesClient,
@@ -8,9 +8,6 @@ import {
   createStores,
 } from "lasereyes-core";
 import { useStore } from "@nanostores/react";
-import { LaserEyesContextType } from "./types";
-
-const LaserEyesContext = createContext<LaserEyesContextType>(initialContext);
 
 export default function LaserEyesProvider({
   config,
@@ -95,7 +92,3 @@ export default function LaserEyesProvider({
     </LaserEyesContext.Provider>
   );
 }
-
-export const useLaserEyes = (): LaserEyesContextType => {
-  return useContext(LaserEyesContext);
-};
